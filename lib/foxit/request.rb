@@ -35,7 +35,7 @@ module Foxit
     end
 
     def request(method, path, options={})
-      path.sub(%r{^/}, '')
+      path.sub!(%r{^/}, '')
 
       token = options.delete(:private_token) ||
               private_token
