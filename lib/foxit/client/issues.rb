@@ -30,10 +30,6 @@ module Foxit
       def reopen_issue(project, id)
         edit_issue(project, id, { closed: 0 })
       end
-
-      def delete_issue(project, id)
-        delete("/projects/#{project}/issues/#{id}")
-      end
     end
   end
 end
