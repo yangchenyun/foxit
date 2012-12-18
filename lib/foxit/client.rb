@@ -1,10 +1,7 @@
 require 'foxit/connection'
 require 'foxit/request'
 
-require 'foxit/client/commits'
-require 'foxit/client/issues'
-require 'foxit/client/milestones'
-require 'foxit/client/repositories'
+require 'foxit/client/users'
 
 module Foxit
   class Client
@@ -20,10 +17,6 @@ module Foxit
     include Foxit::Connection
     include Foxit::Request
 
-    include Foxit::Client::Commits
-    include Foxit::Client::Issues
-    include Foxit::Client::Milestones
-    include Foxit::Client::Repositories
     include Foxit::Client::Users
   end
 end
