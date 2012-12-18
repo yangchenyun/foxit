@@ -39,7 +39,7 @@ module Foxit
       token = options.delete(:private_token) ||
               private_token
 
-      response = connection(conn_options).send(method) do |request|
+      response = connection.send(method) do |request|
 
         if token
           request.headers[:private_token] = token
