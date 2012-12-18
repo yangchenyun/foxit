@@ -31,4 +31,10 @@ module Foxit
 
   # Raised when GitLab returns a 503 HTTP status code
   class ServiceUnavailable < Error; end
+
+  # Raised when web_endpoint is not provided
+  class NoWebEndPoint < Error; end
+
+  # Raised when private_token is not provided
+  class NoPrivateToken < Error; end
 end

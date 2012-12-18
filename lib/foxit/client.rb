@@ -9,6 +9,14 @@ module Foxit
 
     def initialize(options={})
       options = Foxit.options.merge(options)
+
+      if !options.has_key?(:web_endpoint)
+        raise Foxit::NoWebEndPoint
+      end
+      if !options.has_key?(:private_token)
+        raise Foxit::NoPrivateToken
+      end
+
       Configuration::VALID_OPTIONS_KEYS.each do |key|
         send("#{key}=", options[key])
       end
