@@ -9,15 +9,15 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'faraday_middleware', '~> 0.9'
   gem.add_dependency 'hashie', '~> 1.2'
   gem.add_dependency 'multi_json', '~> 1.3'
-  gem.add_dependency 'netrc', '~> 0.7.7'
+  gem.add_development_dependency 'rake'
 
   gem.name          = "foxit"
   gem.licenses = ['MIT']
   gem.version       = Foxit::VERSION
   gem.authors       = ["Steven Yang"]
   gem.email         = ["yangchenyun@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{ Write a gem description}
+  gem.summary       = %q{ Write a gem summary}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
