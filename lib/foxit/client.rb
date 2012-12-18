@@ -2,6 +2,7 @@ require 'foxit/connection'
 require 'foxit/request'
 
 require 'foxit/client/users'
+require 'foxit/client/projects'
 
 module Foxit
   class Client
@@ -10,7 +11,7 @@ module Foxit
     def initialize(options={})
       options = Foxit.options.merge(options)
 
-      if !options.has_key?(:web_endpoint)
+      if !options.has_key?(:endpoint)
         raise Foxit::NoWebEndPoint
       end
       if !options.has_key?(:private_token)
@@ -26,5 +27,6 @@ module Foxit
     include Foxit::Request
 
     include Foxit::Client::Users
+    include Foxit::Client::Projects
   end
 end
