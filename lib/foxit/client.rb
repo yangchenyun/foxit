@@ -3,6 +3,7 @@ require 'foxit/request'
 
 require 'foxit/client/users'
 require 'foxit/client/projects'
+require 'foxit/client/snippets'
 
 module Foxit
   class Client
@@ -28,5 +29,6 @@ module Foxit
 
     include Foxit::Client::Users
     include Foxit::Client::Projects
+    include Foxit::Client::Snippets
   end
 end
