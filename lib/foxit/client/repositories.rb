@@ -19,6 +19,7 @@ module Foxit
         get("/projects/#{project}/repository/commits", options)
       end
 
+      # FIXME not working now
       def raw(project, sha_or_branch, options = {})
         get("/projects/#{project}/repository/commits/#{sha_or_branch}/blob", options)
       end
