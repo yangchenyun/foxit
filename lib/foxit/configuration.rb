@@ -7,7 +7,7 @@ module Foxit
       :adapter,
       :faraday_config_block,
       :api_version,
-      :web_endpoint,
+      :endpoint,
       :private_token,
       :user_agent,
       :request_host,
@@ -33,8 +33,8 @@ module Foxit
       VALID_OPTIONS_KEYS.inject({}){|o,k| o.merge!(k => send(k)) }
     end
 
-    def web_endpoint=(value)
-      @web_endpoint = File.join(value, "")
+    def endpoint=(value)
+      @endpoint = File.join(value, "")
     end
 
     def faraday_config(&block)
@@ -44,7 +44,7 @@ module Foxit
     def reset
       self.adapter        = DEFAULT_ADAPTER
       self.api_version    = DEFAULT_API_VERSION
-      self.web_endpoint   = ''
+      self.endpoint   = ''
       self.private_token  = nil
       self.request_host   = nil
       self.user_agent     = DEFAULT_USER_AGENT
