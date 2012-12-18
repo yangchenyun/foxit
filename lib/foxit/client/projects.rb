@@ -38,23 +38,23 @@ module Foxit
       end
 
       # hooks
-      def project_hooks(project, options = {})
+      def hooks(project, options = {})
         get("/projects/#{project}/hooks", options)
       end
 
-      def project_hook(project, hook_id)
+      def hook(project, hook_id)
         get("/projects/#{project}/hooks/#{hook_id}")
       end
 
-      def add_project_hook(project, options = {})
+      def add_hook(project, options = {})
         post("/projects/#{project}/hooks", options)
       end
 
-      def edit_project_hook(project, hook_id, options = {})
+      def edit_hook(project, hook_id, options = {})
         put("/projects/#{project}/hooks/#{hook_id}", options)
       end
 
-      def delete_project_hook(project, hook_id)
+      def delete_hook(project, hook_id)
         delete("/projects/#{project}/hooks/#{hook_id}")
       end
     end
