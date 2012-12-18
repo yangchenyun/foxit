@@ -11,7 +11,7 @@ module Foxit
         :force_urlencoded => false,
         :raw              => false,
         :ssl              => { :verify => false },
-        :url              => api_endpoint
+        :url              => "#{web_endpoint}/api/v2/"
       }.merge(options)
 
       # TODO: Don't build on every request
