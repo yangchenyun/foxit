@@ -18,7 +18,7 @@ module Foxit
     DEFAULT_ADAPTER        = Faraday.default_adapter
     DEFAULT_API_VERSION    = 2
     DEFAULT_WEB_ENDPOINT   = 'http://git.zenhacks.org'
-    DEFAULT_API_ENDPOINT   = "#{DEFAULT_WEB_ENDPOINT}/api/"
+    DEFAULT_API_ENDPOINT   = "#{DEFAULT_WEB_ENDPOINT}/api/v2"
     DEFAULT_USER_AGENT     = "Foxit Ruby Gem #{Foxit::VERSION}".freeze
     DEFAULT_AUTO_TRAVERSAL = false
 
