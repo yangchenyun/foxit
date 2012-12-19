@@ -1,24 +1,33 @@
 # Foxit
 
-TODO: Write a gem description
+Foxit is an simple Ruby wrapper around [gitlab](https://github.com/gitlabhq/gitlabhq/tree/master/doc/api) V2 API.
+
+The design is inspired by [octokit](https://github.com/pengwynn/octokit), a Github V3 API wrapper.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'foxit'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install foxit
+    gem install octokit
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+## Initlize the connection
+client = Octokit::Client.new(:end_point => "me", :private_token => "sekret")
+
+
+## query methods
+## closely mapping to the Gitlab API V2
+
+client.users
+
+client.create_user
+
+client.project('yangchenyun/foxit')
+
+
+```
+
+Checkout the [`client`](https://github.com/yangchenyun/foxit/tree/master/lib/foxit/client) folder for all available methods on the `cli` object.
 
 ## Contributing
 
