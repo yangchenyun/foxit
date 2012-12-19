@@ -8,6 +8,7 @@ require 'foxit/client/repositories'
 require 'foxit/client/issues'
 require 'foxit/client/milestones'
 require 'foxit/client/notes'
+require 'foxit/client/merge_requests'
 
 module Foxit
   class Client
@@ -38,5 +39,6 @@ module Foxit
     include Foxit::Client::Issues
     include Foxit::Client::Milestones
     include Foxit::Client::Notes
+    include Foxit::Client::MergeRequests
   end
 end
