@@ -11,19 +11,20 @@ The design is inspired by [octokit](https://github.com/pengwynn/octokit), a Gith
 ## Usage
 
 ```ruby
-## Initlize the connection
-client = Octokit::Client.new(:end_point => "me", :private_token => "sekret")
+# Initlize the connection
+require 'foxit'
+client = Foxit::Client.new(:endpoint => "http://git.zenhacks.org", :private_token => "secret")       
 
+# Query Methods
 
-## query methods
-## closely mapping to the Gitlab API V2
-
+## GET /users
 client.users
 
+## POST /users
 client.create_user
 
-client.project('yangchenyun/foxit')
-
+## GET /projects/:name
+client.project('foxit')
 
 ```
 
