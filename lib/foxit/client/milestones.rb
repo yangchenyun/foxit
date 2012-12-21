@@ -17,6 +17,14 @@ module Foxit
       def edit_milestone(project, id, options={})
         put("/projects/#{project}/milestones/#{id}", options)
       end
+
+      def close_milestone(project, id)
+        edit_milestone(project, id, { closed: 1 })
+      end
+
+      def reopen_milestone(project, id)
+        edit_milestone(project, id, { closed: 0 })
+      end
     end
   end
 end
