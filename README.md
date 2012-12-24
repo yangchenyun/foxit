@@ -6,7 +6,7 @@ The design is inspired by [octokit](https://github.com/pengwynn/octokit), a Gith
 
 ## Installation
 
-    gem install octokit
+    gem install foxit
 
 ## Usage
 
